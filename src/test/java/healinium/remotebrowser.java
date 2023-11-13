@@ -24,6 +24,7 @@ public class remotebrowser {
 	     ChromeOptions options = new ChromeOptions(); 
 	     RemoteWebDriver delegate = new RemoteWebDriver(dockerUrl, options);       
 		driver=	SelfHealingDriver.create(delegate);
+		driver.get("https://www.saucedemo.com/");
 		System.out.println(driver.getCurrentUrl());
 		System.out.println(driver.getTitle());
 		driver.findElement(By.xpath("//input[@id='user-name']")).sendKeys("standard_user");
